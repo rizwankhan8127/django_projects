@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+   {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/product_style.css' %}">
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-items">
+           
+           <div class="card-text">
+               <img src="{{product.image.url}}" width="200">
+              <p>{{product.name|upper}}</p>
+              <p>{{product.product_details}}</p>
+              <p>{{product.price}}</p>
+              <!-- <p>{{product.rating}}</p> -->
+              <button id="add_to_cart_btn"><a href="/product/add_to_cart/{{product.id}}">Remove</a></button>
+              <button id="buy_now_btn"><a href="">Buy now</a></button>
+           </div>
+        </div>
+     </div>
+</body>
+</html>
